@@ -62,3 +62,7 @@ mySet.add("braismoure@mouredev.com")
 mySet.add("braismoure@mouredev.com")
 mySet.add("BraisMoure@mouredev.com")
 console.log(mySet)
+
+//borra el contenido del set
+mySet.clear()
+console.log(mySet.size)
