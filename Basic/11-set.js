@@ -13,6 +13,8 @@ console.log(mySet)
 
 // Inicialización
 
+//EL SET NO INDEXA COMO UN ARRAY CON 0, 1 , ..., N
+// indexa con un hash
 mySet = new Set(["Brais", "Moure", "mouredev", 37, true, "braismoure@mouredev.com"])
 
 console.log(mySet)
@@ -29,13 +31,14 @@ mySet.delete("https://moure.dev")
 
 console.log(mySet)
 
-console.log(mySet.delete("Brais"))
+console.log(mySet.delete("Brais")) // retorna tru si existe el elemento
+                                   // y si fue eliminado
 console.log(mySet.delete(4))
 
 console.log(mySet)
 
 // has
-
+// comprobamos si de verdad existe un elemento x
 console.log(mySet.has("Moure"))
 console.log(mySet.has("Brais"))
 

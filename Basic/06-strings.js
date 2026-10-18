@@ -28,21 +28,23 @@ console.log(greeting.toLowerCase()) // Minúsculas
 console.log(greeting.indexOf("Hola")) // Índice
 console.log(greeting.indexOf("Brais"))
 console.log(greeting.indexOf("MoureDev"))
-console.log(greeting.includes("Hola")) // Incluye
+console.log(greeting.includes("Hola")) // Incluye. Comprueba si existe
 console.log(greeting.includes("Brais"))
 console.log(greeting.includes("MoureDev"))
-console.log(greeting.slice(0, 10)) // Sección
+console.log(greeting.slice(0, 10)) // Sección, agarra lo que esta entre el indice 0 y 10
 console.log(greeting.replace("Brais", "MoureDev")) // Reemplazo
 
 // Template literals (plantillas literales)
 
-// Strings en varias líneas
+// Strings en varias líneas esto funciona solamente con la wea
+// de una comilla con o "" 
 let message = `Hola, este
 es mi
 curso de
 JavaScript`
 console.log(message)
 
-// Interpolación de valores
+// Interpolación de valores ${variable} y solamente funcion dentro
+// de strings con `` (acento invertido)
 let email = "braismoure@mouredev.com"
 console.log(`Hola, ${myName}! Tu email es ${email}.`)

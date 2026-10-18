@@ -4,13 +4,24 @@ Vídeo: https://youtu.be/1glVfFxj8a4?t=6458
 */
 
 // 1. Crea una variable para cada operación aritmética
-
+let a = 10
+let b = 5 
 // 2. Crea una variable para cada tipo de operación de asignación,
 //    que haga uso de las variables utilizadas para las operaciones aritméticas
-
+let suma = a + b
+let resta = a - b
+let modulo = a % b // deberia dar 0
+let exponencial = a**b
 // 3. Imprime 5 comparaciones verdaderas con diferentes operadores de comparación
 
+console.log(a > b) //true
+console.log(a != b) //true 
+let name2 = "juanito"
+console.log(name2 === name2) //true
 // 4. Imprime 5 comparaciones falsas con diferentes operadores de comparación
+console.log(a < b) //false
+console.log(a == b) //false
+console.log(a === b ) //falso, aunque son del mismo tipo no tiene el mismo valor
 
 // 5. Utiliza el operador lógico and
 

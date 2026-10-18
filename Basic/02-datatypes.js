@@ -10,7 +10,7 @@ let myName = "Brais Moure"
 let alias = 'MoureDev'
 let email = `braismoure@mouredev.com`
 
-// Números (number)
+// Números (number) 64 bits
 let age = 37 // Entero
 let height = 1.77 // Decimal
 
@@ -26,11 +26,20 @@ console.log(undefinedValue)
 let nullValue = null
 
 // Symbol
+/*son o intentan representar valores unicos 
+que pueden ser utilizados como identificadores de propiedades de objetos
+o para crear propiedades de objetos que no colisionen con otras propiedades de objetos
+*/ 
 
 let mySymbol = Symbol("mysymbol")
 
 // BigInt
-
+/*
+cuando necesitamos trabajar con números enteros muy grandes
+que no caen en number
+se puede incluso ocupar toda la memoria de la maquina
+numero ENTEROS.s
+*/
 let myBigInt = BigInt(817239871289371986589716389471628379612983761289376129)
 let myBigInt2 = 817239871289371986589716389471628379612983761289376129n
 

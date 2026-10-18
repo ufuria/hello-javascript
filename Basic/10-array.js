@@ -68,10 +68,10 @@ console.log(myArray)
 
 // shift y unshift
 
-console.log(myArray.shift())
+console.log(myArray.shift()) // elimina el primer elemento del array al igual que el pop y lo devuelve
 console.log(myArray)
 
-myArray.unshift("Brais", "mouredev")
+myArray.unshift("Brais", "mouredev") //sirve para agregar 1 o mas elementos al prinicipio del array
 console.log(myArray)
 
 // length
@@ -79,8 +79,8 @@ console.log(myArray)
 console.log(myArray.length)
 
 // clear
-
-myArray = []
+// para borrar todo el contenido un array se puede volver a inicializar
+myArray = [] 
 myArray.length = 0 // alternativa
 console.log(myArray)
 
