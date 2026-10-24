@@ -64,14 +64,70 @@ console.log(`la cadena contiene ${cont} vocales`)
 contadorVocales(cadena)
 // 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
 
+let arrayDeStrings = [cadena, "juanito"]  
+
+/** 
+ * @param {string[]} arr | La funcion recibe como parametro un array, de esta forma 
+  * la la info acorde de cada metodo que se este ocupando de un array
+ */
+let enMayusculas = (arr) => arr.map((s) => s.toUpperCase()) 
+console.log(enMayusculas(arrayDeStrings))
 // 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
-
+let esPrimo = (n) => {
+  return n%2 == 0 ? true : false
+}
+console.log(esPrimo(57)) // broma 
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+let ar1 = [1,2,3,5]
+let ar2 = [1,3,5,6,1]
+let uwu = (arr1,arr2) => {
+  let comunes = []
+  for (let i = 0; i<arr1.length;i++){
+    (arr2.includes(arr1[i]) && !(comunes.includes(arr1[i]))) ? comunes.push(arr1[i]): null
+  } 
+  return arr1
+}
 
+console.log(uwu(ar1,ar2))
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
+ar1 = [1,2,3,6,8]
+/**
+  *
+  *@param {number[]} arr1
+  */
+let sumadorPares = (arr1) =>{
+  let cont = 0
+  for(let i = 0; i<arr1.length; i++){
+    arr1[i] % 2 == 0 ? cont += arr1[i] : null
+  }
+  return cont
+}
+console.log("la suma de todos los elementos pares es:", sumadorPares(ar1))
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
 
-// 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
+ar1 = [1,2,3,4,5]
+let elevadosCuadrado=(arr1) => arr1.map((e) => e*2)
+console.log(elevadosCuadrado(ar1))
 
+// 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
+let cdn = "inflo globos con el poto"
+/**
+  * @param {string} str
+  */
+let invertidora = (str) => {
+  let palabras = str.split(" ")
+  let resultado = []
+  
+  for(let i = palabras.length - 1 ; i >= 0 ; i--){
+    resultado.push(palabras[i])
+  }
+  return resultado.join(" ")
+}
+console.log(invertidora(cdn))
 // 10. Crea una función que calcule el factorial de un número dado
+/**
+  * @param {number} a
+  */
+let factorialDe = (a) => { return a <= 1 ?  1 : (a * factorialDe(a - 1))  }
+console.log(factorialDe(3))
