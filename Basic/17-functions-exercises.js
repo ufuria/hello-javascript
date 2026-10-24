@@ -7,6 +7,37 @@ Vídeo: https://youtu.be/1glVfFxj8a4?t=14146
 
 // 1. Crea una función que reciba dos números y devuelva su suma
 
+//forma 1, devuelve la suma pero no se puede usar 
+let sum = (a,b) => {console.log("La suma es:"+ (a+b) ) }
+sum(1,1)
+
+//forma 2, return explicito 
+let sum2 = (a,b) => {return a+b}
+
+let resultado = sum2(1,5)
+
+console.log(`La suma-2 da: ${resultado}`)
+
+
+resultado>5 ? console.log(`La suma-2 da: ${resultado}`) : console.console("la suma da menor que 5")
+
+//forma 3, return implicito
+let sum3 = (a,b) => a+b
+console.log(`la suma-3 da:` + sum3(5,5)) // lo harcodea a un string
+console.log(`la suma-3.1 da`, sum3(5,5)) //con "," formate cada argumento segun su tipo, no lo harcodea
+console.log(`la suma-3.1.1 da ${sum3(5,5)}`) // lo harcodea a string tambien
+
+//forma 4, funcion tradicional
+function sum4(a,b){
+  return (a+b)
+}
+console.log("La suma 4 da:",sum4(10,10))
+
+// forma 5, con funciones anonimas
+
+let anonima = function (a,b) {return (a+b)} 
+console.log("La suma 5 da:",anonima(6,4))
+
 // 2. Crea una función que reciba un array de números y devuelva el mayor de ellos
 
 // 3. Crea una función que reciba un string y devuelva el número de vocales que contiene
