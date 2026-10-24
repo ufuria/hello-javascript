@@ -49,13 +49,43 @@ for(let i = 0; i< b.length; i++ ){
   "aeiou".includes(b[i].toLowerCase()) ? cont += 1 : b[i] != " " && console.log(`${b[i]}, no es una vocal`)
 } 
 console.log(cont)
-
-// 6. Dado un array de números, usa un bucle para multiplicar todos los números y mostrar el producto
-
+// 6. Dado un array de números, usa un Bucle para multiplicar todos los números y mostrar el producto
+b = [1,2,3,4,5]
+for(let i = 0; i < b.length ; i++){
+  b[i] *= 2
+  console.log(b[i])
+}
 // 7. Escribe un bucle que imprima la tabla de multiplicar del 5
+for(let i = 0; i <= 10; i++){
+  let a = i * 5 
+  console.log(a)
+}
 
 // 8. Usa un bucle para invertir una cadena de texto
-
+b = "juan"
+let copiaInvertida = ""
+for(let i = b.length - 1 ; i >= 0 ; i--){
+  copiaInvertida += b[i]
+}
+console.log(copiaInvertida)
 // 9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci
+let A = 0
+let B = 1
+for(let i = 1; i<10; i++){
+  console.log(B)
+  let siguiente = A+B
+
+  A = B
+  B = siguiente 
+}
+
+
 
 // 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10
+
+let h = [1,2,3,4,11,14,15]
+let h2 = []
+for (let i = 0; i<h.length; i++){
+  h[i]<10 ? null : h2.push(h[i])
+}
+console.log(h2)
