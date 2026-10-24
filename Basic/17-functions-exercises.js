@@ -39,6 +39,16 @@ let anonima = function (a,b) {return (a+b)}
 console.log("La suma 5 da:",anonima(6,4))
 
 // 2. Crea una función que reciba un array de números y devuelva el mayor de ellos
+let arrayNumbers = [1,2,3,4,5]
+arrayNumbers = [10,2,13,51]
+let numeroMayor = (array) => {
+ let mayor = 0; 
+  for (let i = 0; i < array.length; i++){
+    array[i] > mayor ? mayor = array[i] : null
+  }
+    console.log(`El numero mayor del array es ${mayor}`)
+}
+numeroMayor(arrayNumbers)
 
 // 3. Crea una función que reciba un string y devuelva el número de vocales que contiene
 
