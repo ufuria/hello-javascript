@@ -41,6 +41,7 @@ console.log("La suma 5 da:",anonima(6,4))
 // 2. Crea una función que reciba un array de números y devuelva el mayor de ellos
 let arrayNumbers = [1,2,3,4,5]
 arrayNumbers = [10,2,13,51]
+
 let numeroMayor = (array) => {
  let mayor = 0; 
   for (let i = 0; i < array.length; i++){
@@ -48,10 +49,19 @@ let numeroMayor = (array) => {
   }
     console.log(`El numero mayor del array es ${mayor}`)
 }
+
 numeroMayor(arrayNumbers)
 
 // 3. Crea una función que reciba un string y devuelva el número de vocales que contiene
-
+let cadena = "xarximiliano sebastian" // 10 vocales
+let contadorVocales = (c) => {
+  let cont = 0
+  for(let i = 0; i < c.length; i++){  
+      "aeiou".includes(c[i].toLowerCase()) ? (cont +=1) : null
+  }
+console.log(`la cadena contiene ${cont} vocales`)
+}
+contadorVocales(cadena)
 // 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
 
 // 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
