@@ -117,6 +117,14 @@ console.log(sumWith(1, 2))
 
 // Currying
 
+/*
+  * Tecnica de programacion funcional
+  * que transforma una funcion que acepta
+  * multiples argumentos en una secuencia de 
+  * funciones donde cada una toma un
+  * UNICO argumento
+  * */
+
 function currySum(a) {
     return function (b) {
         return function (c) {
@@ -153,3 +161,4 @@ processData([1, 2, 3], processResult2)
 processData([1, 2, 3], (result) => {
     console.log(`Mi resultado en la arrow function es: ${result}`)
 })
+
