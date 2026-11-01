@@ -127,9 +127,29 @@ function ejSeisCallback(numero){
   console.log(`Caia ceniza del cielo. He recibido el ${numero} cuando me invocaron`)
 }
 
-ejercicioSeis(ejSeisCallback, 1,2,3,4,5)
+ejercicioSeis(ejSeisCallback,1,2,3,4,5)
 // 7. Desarrolla una función parcial
 
+function multiplicador2(a,...nNumeros){
+  // variable para almacenar el resultado
+  // de la multiplicacion de los numeros ingresador por el parametro rest
+  let resultMult1 = 1 
+  
+  for(let numero of nNumeros){
+   resultMult1 *= numero
+  }
+  return a * resultMult1
+}
+
+function multiplicadorParcial(nBase){
+  return function (...numeros){
+    return multiplicador2(nBase, ...numeros)
+  }
+}
+
+const multiplicaCon = multiplicadorParcial(2)
+
+console.log(multiplicaCon(4, 5, 2))
 // 8. Implementa un ejemplo que haga uso de Spread
 
 // 9. Implementa un retorno implícito
