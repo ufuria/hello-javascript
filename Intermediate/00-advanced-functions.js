@@ -4,7 +4,11 @@ Vídeo: https://youtu.be/iJvLAZ8MJ2E?t=346
 */
 
 // Ciudadanos de primera clase
-
+// los meniconados arriba son una propiedad del lenguaje que permite ttratar a las funciones como cualquier otro valor(asignarlas a avariables, pasarlas como argumentos o devolverlas)
+//
+// Las funciones de orden mayor son una categoria especifica de funciones que aprovechan esa propiedad para recibir otras funciones como argumentos o retornar funciones
+//
+// Empezamos con ejemplos de ciudadanos de primera clas:
 const greet = function (name) {
     console.log(`Hola, ${name}`)
 }
@@ -141,7 +145,17 @@ console.log(sumC(3))
 console.log(sumC(4))
 console.log(sumAB(5)(7))
 
+
+
+
 // Callbacks
+
+/*
+  * A una funcion le pasamos otra
+  * funcion como argumento para acabar personalisando su comportamiento (ciudadano de primera clase)
+  *
+  *
+  * */
 
 function processData(data, callback) {
     const result = sum(...data)
