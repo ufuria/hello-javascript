@@ -157,22 +157,39 @@ console.log(sumAB(5)(7))
   *
   * */
 
+//callback es la funcion que se le pasa por parametro
 function processData(data, callback) {
     const result = sum(...data)
-    callback(result)
+    callback(result) // cual sea la funcion que recibe processData como callback aqui es invocada y se le pasa la variable result, ahora la funcion que se paso por parametro sera la que ejecutara su propia logica con el argumento result
 }
 
-function processResult(result) {
-    console.log(result)
+function processResult(resultado) {
+    console.log(resultado)
 }
 
-function processResult2(result) {
-    console.log(`Mi resultado es: ${result}`)
+function processResult2(resultado) {
+    console.log(`Mi resultado es: ${resultado}`)
 }
+/* aqui inclusive en los primeros 2 processData no le pasamos el argumento a recibir
+  ya que dentro del processData se le pasara, adentro de processData esta callback
+  y callback = processResult
+  callback(result) = processResult(result)
+  y como esta definido la funcion processResult es que lo que le pasemos por argumento
+  ahora sera procesado y renombrado como resultado, esa varible vive solo dentro del callback
+  en este caso es una copia del valor numerico del result.
+*/
 
+/* Si es number, string o booleano se le pasa una copia como en este caso 
+  PERO
+  si se le pasa objetos o arrays lo que se copia es la referencia OJO CONO ESTO
+  ya que las dos variables son distintas pero apuntan al mismo objeto/array
+  por lo que si modificas el contenido al hacer por ejemplo resultado.push(4)
+  el cambio se vera reflejado en ambas funciones
+  en cambio si reasignas; resultado = [] la otra variable no se entera
+*/
 processData([1, 2, 3], processResult)
 processData([1, 2, 3], processResult2)
-processData([1, 2, 3], (result) => {
-    console.log(`Mi resultado en la arrow function es: ${result}`)
+processData([1, 2, 3], (resulta) => {
+    console.log(`Mi resultado en la arrow function es: ${resulta}`)
 })
 
