@@ -142,6 +142,11 @@ function multiplicador2(a,...nNumeros){
 }
 
 function multiplicadorParcial(nBase){
+  /*al momento de definir esta funcion anonima(la de abajo de este comentario) establecimos que le llegaran n numeros por por argumentos este es el parametro rest
+    * convierte todos los numeros pasados por argumento y los transpasa a un array
+    * luego al llamar la funcion multiplicador2 hace uso del "spread" que convierte un array a numeros sueltos
+    * asi podemos pasar las cosas que queramos y luego como multiplicador2 recibe n cosas (rest) se vuelven compatibles y dentro de multiplicador2 se trabaja ese array creado con haciendo uso del operador Rest
+    * */
   return function (...numeros){
     return multiplicador2(nBase, ...numeros)
   }
@@ -149,7 +154,7 @@ function multiplicadorParcial(nBase){
 
 const multiplicaCon = multiplicadorParcial(2)
 
-console.log(multiplicaCon(4, 5, 2))
+console.log(multiplicaCon(4, 5))
 // 8. Implementa un ejemplo que haga uso de Spread
 
 // 9. Implementa un retorno implícito
