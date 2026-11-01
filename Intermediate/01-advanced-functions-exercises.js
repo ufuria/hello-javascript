@@ -104,8 +104,30 @@ contador.increment()
 console.log(contador.getValue())
 // 5. Crea una función sumManyTimes(multiplier, ...numbers) que primero sume todos los números (usando parámetros Rest) y luego multiplique el resultado por multiplier
 
+function sumManyTimes(multiplier, ...numbers){
+  let suma = 0
+  for(let number of numbers){
+    suma += number
+  }
+  return (suma * multiplier)
+}
+console.log(sumManyTimes(2,1,2,3,4,5))
+
 // 6. Crea un Callback que se invoque con el resultado de la suma de todos los números que se le pasan a una función
 
+function ejercicioSeis(callback, ...numbers){
+  let resultadoSum = 0
+  for (numero of numbers){
+    resultadoSum += numero
+  }
+  callback(resultadoSum)
+}
+
+function ejSeisCallback(numero){
+  console.log(`Caia ceniza del cielo. He recibido el ${numero} cuando me invocaron`)
+}
+
+ejercicioSeis(ejSeisCallback, 1,2,3,4,5)
 // 7. Desarrolla una función parcial
 
 // 8. Implementa un ejemplo que haga uso de Spread
