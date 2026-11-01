@@ -157,6 +157,44 @@ const multiplicaCon = multiplicadorParcial(2)
 console.log(multiplicaCon(4, 5))
 // 8. Implementa un ejemplo que haga uso de Spread
 
-// 9. Implementa un retorno implícito
 
+let arrayNumeros = [1,2,3,4]
+function sumaConSpread(a , b, c ,d){
+  return a + b + c + d
+}
+console.log(sumaConSpread(...arrayNumeros)) 
+//spread aqui          -> ^^^^^^^^^^^^^^^
+
+// otro ejemplo mejorcito que funcion con n cosas
+
+function sumaConSpreadV2(...numeros){
+  let resultadoSum = 0
+  for (let numero of numeros){
+    resultadoSum += numero
+  }
+  return resultadoSum
+}
+
+console.log(sumaConSpreadV2(...arrayNumeros,5))
+//uso del spread ->        ^^^^^^^^^^^^^^^
+// el 5 que le pasamos por argumento
+// es aceptado ya que la funcion como tal espera 
+// n parametros gracias al uso del operador Rest
+// en la definicion de la funcion
+//
+// 9. Implementa un retorno implícito
+let retornoImplicito = a => a*2
+console.log(retornoImplicito(3))
 // 10. Haz uso del this léxico
+class Gato{
+  #nombre // atributo privado
+  constructor(nombre){
+    this.#nombre = nombre
+  }
+  getNombre(){
+   return this.#nombre 
+  }
+}
+let g1 = new Gato("Kiru")
+console.log(g1.getNombre())
+console.log(g1.nombre) // comprobamos que no se puede acceder al atributo ya que es privado
