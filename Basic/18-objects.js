@@ -99,7 +99,7 @@ console.log(person === person4)
 console.log(person.name == person4.name)
 
 // Iteración
-
+console.log("/*/**/")
 for (let key in person4) {
     console.log(key + ": " + person4[key])
 }

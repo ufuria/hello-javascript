@@ -52,7 +52,7 @@ console.log(cont)
 // 6. Dado un array de números, usa un Bucle para multiplicar todos los números y mostrar el producto
 b = [1,2,3,4,5]
 for(let i = 0; i < b.length ; i++){
-  b[i] *= 2
+  b[i] *= i
   console.log(b[i])
 }
 // 7. Escribe un bucle que imprima la tabla de multiplicar del 5
@@ -63,6 +63,8 @@ for(let i = 0; i <= 10; i++){
 
 // 8. Usa un bucle para invertir una cadena de texto
 b = "juan"
+console.log("/*/*/*/")
+console.log(typeof b)
 let copiaInvertida = ""
 for(let i = b.length - 1 ; i >= 0 ; i--){
   copiaInvertida += b[i]

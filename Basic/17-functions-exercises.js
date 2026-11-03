@@ -23,8 +23,8 @@ resultado>5 ? console.log(`La suma-2 da: ${resultado}`) : console.console("la su
 
 //forma 3, return implicito
 let sum3 = (a,b) => a+b
-console.log(`la suma-3 da:` + sum3(5,5)) // lo harcodea a un string
-console.log(`la suma-3.1 da`, sum3(5,5)) //con "," formate cada argumento segun su tipo, no lo harcodea
+console.log(`la suma-3 da:` + sum3(5,5)+1) // lo harcodea a un string
+console.log(`la suma-3.1 da`, sum3(5,5) + 1) //con "," formate cada argumento segun su tipo, no lo harcodea
 console.log(`la suma-3.1.1 da ${sum3(5,5)}`) // lo harcodea a string tambien
 
 //forma 4, funcion tradicional
@@ -107,7 +107,7 @@ console.log("la suma de todos los elementos pares es:", sumadorPares(ar1))
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
 
 ar1 = [1,2,3,4,5]
-let elevadosCuadrado=(arr1) => arr1.map((e) => e*2)
+let elevadosCuadrado=(arr1) => arr1.map((e) => e**2)
 console.log(elevadosCuadrado(ar1))
 
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso

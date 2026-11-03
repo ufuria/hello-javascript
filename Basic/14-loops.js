@@ -17,7 +17,6 @@ for (let i = 0; i < numbers.length; i++) {
     console.log(`Elemento: ${numbers[i]}`)
 }
 
-// while
 
 let i = 0
 while (i < 5) {
@@ -68,7 +67,6 @@ for (let value of myString) {
 }
 
 // break y continue
-
 for (let i = 0; i < 10; i++) {
     if (i == 5) {
         continue

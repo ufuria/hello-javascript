@@ -16,11 +16,14 @@ for (let i = 0; i < 5; i++) {
 }
 
 // Con parámetros
-
+/**
+  *
+  * @param {string} name : name es el nombre debe ser un string
+  **/
 function myFuncWithParams(name) {
     console.log(`¡Hola, ${name}!`)
 }
-
+myFuncWithParams(2)
 myFuncWithParams("Brais")
 myFuncWithParams("MoureDev")
 
@@ -83,7 +86,6 @@ function extern() {
     intern()
 }
 
-extern()
 // intern() Error: fuera del scope
 
 // Funciones de orden superior
