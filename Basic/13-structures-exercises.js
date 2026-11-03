@@ -41,7 +41,7 @@ let mapUno = new Map([
   ["4", "Abril"]
 ]) 
 // 8. Comprueba si el mes número 5 existe en el map e imprime su valor
-
+console.log("/*/*/*/*/*")
 console.log(mapUno.has("1"))
 console.log(mapUno.has("5"))
 // 9. Añade al mapa una clave con un array que almacene los meses de verano
@@ -57,10 +57,11 @@ let setFromArray = new Set(arrayToSet)
 console.log("\n")
 console.log(setFromArray)
 
-let map2 = new Map()
-map2 = new Map([
-  ["setKey", setFromArray]
-])
+let map2 = new Map([])
+map2.set("setKey", setFromArray)
+//map2 = new Map([
+//  ["setKey", setFromArray]
+//])
 console.log("\n")
 console.log(map2)
   
